@@ -97,5 +97,9 @@ const download = async (name) => {
   console.log("Loading... Please wait! It may take a while!");
   const results = await download(name);
 
-  console.log(results); // all movies with download links
+  if (results.length === 0) {
+    console.log("No results found ... Please check your movie name!!!");
+  } else {
+    console.log(results); // all movies with download links
+  }
 })();
